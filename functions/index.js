@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 const express = require('express');
 const cors = require('cors');
-const { response } = require('express');
+const { request } = require('express');
 const stripe = require('stripe')(
   'sk_test_51I5oHIFQSiZUYx2uoJnGXS5tUueUSlWSFe4DwAWOBKJe4lcS6RlotraTATS7HW0nRsuRVdhefxhoAqj8iDi1VdzW00cBro0dFk'
 );
@@ -19,7 +19,7 @@ app.post('/payments/create', async (request, response) => {
   console.log('payment request received soon!!!', total);
   const paymentIntent = await stripe.paymentIntents.create({
     amount: total, //subunits of currency
-    currency: 'rupee',
+    currency: 'usd',
   });
   //   ok-created
   response.status(201).send({
@@ -29,3 +29,6 @@ app.post('/payments/create', async (request, response) => {
 
 // listen command
 exports.api = functions.https.onRequest(app);
+
+// example-end point
+//http://localhost:5001/rebuild-f71a0/us-central1/api
