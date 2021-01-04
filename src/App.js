@@ -7,7 +7,14 @@ import Checkout from './Checkout';
 import Login from './Login';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
+import Payment from './Payment';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import Orders from './Orders';
 
+const promise = loadStripe(
+  'pk_test_51I5oHIFQSiZUYx2umpU1Xpsv92tezskCyXzoh3hC9F4LXt9LRr64aOoolxLsR4zQbws7IGxq3RmnxYPS24l7e5Nd00XfHRW84P'
+);
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -34,12 +41,22 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
+          <Route path="/orders">
+            <Header />
+            <Orders />
+          </Route>
           <Route path="/login">
             <Login />
           </Route>
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/payment">
+            <Header />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
           </Route>
           {/* default route */}
           {/* note:the dault route to be at bottom always */}
