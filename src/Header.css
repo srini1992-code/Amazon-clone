@@ -38,13 +38,12 @@
 .header__option {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   margin: 0 10px;
   flex-direction: column;
   color: white;
 }
 .header__optionLineOne {
-  font-size: 18px;
+  font-size: 10px;
 }
 .header__optionLineTwo {
   font-size: 13px;
@@ -57,4 +56,17 @@
 }
 .header__basketCount {
   margin: 0 10px;
+}
+.header__option:hover,
+.header__optionBasket:hover,
+.header__optionBasketCount:hover {
+  color: #cd9042;
+  transform: scale(1.025);
+}
+.header__option.grow,
+.header__searchIcon.grow,
+.header__searchInput.grow,
+.header__optionBasket.grow,
+.header__optionBasketCount.grow {
+  transition: all 0.2s ease-in-out;
 }
