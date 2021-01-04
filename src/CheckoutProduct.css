@@ -24,3 +24,7 @@
   font-size: 17px;
   font-weight: 800;
 }
+.checkoutProduct__btn:hover {
+  transform: scale(1.015);
+  box-shadow: 1.25px 2.5px 0.5px #888888;
+}
