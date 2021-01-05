@@ -8,10 +8,12 @@ function Order({ order }) {
   return (
     <div className="order">
       <h2>Order</h2>
-      <p>{moment.units(order.data.created).format('MMMM Do YYYY,h:mma')}</p>
+      <p>{moment.unix(order.data.created).format('MMMM Do YYYY,h:mma;')}</p>
       <p className="order__id">
+        <h5>Order ID:</h5>
         <small>{order.id}</small>
       </p>
+
       {order.data.basket?.map((item) => (
         <CheckoutProduct
           id={item.id}
@@ -30,7 +32,7 @@ function Order({ order }) {
         value={order.data.amount / 100}
         displayType={'text'}
         thousandSeperator={true}
-        prefix={'₹'}
+        prefix={'$'}
       />
     </div>
   );
