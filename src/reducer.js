@@ -3,20 +3,21 @@ export const initialState = {
   user: null,
 };
 
-// selector
+//Selector that calculates basket total
 export const getBasketTotal = (basket) =>
   basket?.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
-  // dispatch the action to test
   console.log(action);
+  //dispatching the action to test
 
   switch (action.type) {
-    case 'ADD_To_BASKET':
+    case 'ADD_TO_BASKET':
       return {
         ...state,
         basket: [...state.basket, action.item],
       };
+
     case 'EMPTY_BASKET':
       return {
         ...state,
@@ -28,22 +29,26 @@ const reducer = (state, action) => {
         (basketItem) => basketItem.id === action.id
       );
       let newBasket = [...state.basket];
+
       if (index >= 0) {
         newBasket.splice(index, 1);
       } else {
         console.warn(
-          `can't remove product (id:${action.id}as its not in basket)`
+          `Can't remove product (id: ${action.id}) as it's not in the basket!`
         );
       }
+
       return {
         ...state,
         basket: newBasket,
       };
+
     case 'SET_USER':
       return {
         ...state,
         user: action.user,
       };
+
     default:
       return state;
   }
