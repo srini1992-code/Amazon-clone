@@ -3,10 +3,12 @@ import './Orders.css';
 import { db } from './firebase';
 import { useStateValue } from './StateProvider';
 import Order from './Order';
+import Footer from './Footer';
 
 function Orders() {
   const [{ basket, user }, dispatch] = useStateValue();
   const [orders, setOrders] = useState([]);
+
   useEffect(() => {
     if (user) {
       db.collection('users')
@@ -33,6 +35,7 @@ function Orders() {
           <Order order={order} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
