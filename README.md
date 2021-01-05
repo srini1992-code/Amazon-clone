@@ -1,7 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-The app is live at :https://full-stack-clone-d5a85.web.app/login
+App was deployed in firebase.You can check the app here :https://rebuild-f71a0.web.app/
+ 
 
 ## Available Scripts
 
