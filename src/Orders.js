@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Orders.css';
 import { db } from './firebase';
+import './Orders.css';
 import { useStateValue } from './StateProvider';
 import Order from './Order';
 import Footer from './Footer';
@@ -27,9 +27,11 @@ function Orders() {
       setOrders([]);
     }
   }, [user]);
+
   return (
     <div className="orders">
-      <h1>Your Orders</h1>
+      <h1>Orders Page</h1>
+
       <div className="orders__order">
         {orders?.map((order) => (
           <Order order={order} />

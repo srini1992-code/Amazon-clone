@@ -7,14 +7,17 @@ import { useHistory } from 'react-router-dom';
 
 function Subtotal() {
   const history = useHistory();
+
+  // pull the basket from statevalue
   const [{ basket }, dispatch] = useStateValue();
+
   return (
     <div className="subtotal">
       <CurrencyFormat
         renderText={(value) => (
           <>
             <p>
-              subtotal ({basket.length} items): <strong>{value}</strong>
+              subtotal ({basket?.length} items): <strong>{value}</strong>
             </p>
             <small className="subtotal__gift">
               <input type="checkbox" />
@@ -26,9 +29,12 @@ function Subtotal() {
         value={getBasketTotal(basket)}
         displayType={'text'}
         thousandSeperator={true}
-        prefix={'₹'}
+        prefix={'$'}
       />
-      <button onClick={(e) => history.push('./payment')}>
+      <button
+        className="subtotal__btn"
+        onClick={(e) => history.push('./payment')}
+      >
         Proceed to checkout
       </button>
     </div>

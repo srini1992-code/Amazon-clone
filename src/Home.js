@@ -1,6 +1,6 @@
 import React from 'react';
-import Product from './Product';
 import './Home.css';
+import Product from './Product';
 
 function Home() {
   return (
@@ -8,56 +8,63 @@ function Home() {
       <div className="home__container">
         <img
           className="home__image"
-          src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/Xiaomi/Mi_G17/GW_Hero/New_Color/D19646901_IN_WL_Mi_G71_Launch_DesktopTallHero_1500x600_C3._CB412973269_.jpg"
+          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
           alt=""
         />
         <div className="home__row">
           <Product
-            id="123213414"
-            title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses"
+            id="12321341"
+            title="The Lean Startup"
             price={29.99}
-            image="https://m.media-amazon.com/images/I/81jgCiNJPUL._AC_UY218_.jpg"
+            image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
             rating={5}
           />
           <Product
-            id="43215789"
-            title="Kenwood KMix Stand Mixer for baking,Stylish Kitchen Mixer with K-beater,Dough Hook and Whisk,5 Litre Glass Bowl"
-            price={239.99}
-            image="https://images-na.ssl-images-amazon.com/images/I/51ae8jtSakL._SL1200_.jpg"
-            rating={4}
+            id="49538094"
+            title="Logitech MX Keys Advanced Wireless Illuminated Keyboard - Graphite"
+            price={98.99}
+            image="https://images-na.ssl-images-amazon.com/images/I/61PIn5vGm2L._AC_SX679_.jpg"
+            rating={5}
           />
         </div>
+
         <div className="home__row">
           <Product
-            id="43215789"
-            title="Usha Colt Mixer Grinder (MG-3053) 500-Watt 3 Jars with Copper Motor (White/Blue)"
-            price={239.99}
-            image="https://images-na.ssl-images-amazon.com/images/I/71sW%2BDlkIyL._SL1500_.jpg"
-            rating={4}
+            id="4903850"
+            title="Athletic Greens Ultimate Daily, Whole Food Sourced All in One Greens Supplement Powder, NSF Certified, GlutenFree, Vegan and Keto Friendly, 30 Day Supply, 360 Grams (Athletic Greens Ultimate Daily)"
+            price={97.99}
+            image="https://images-na.ssl-images-amazon.com/images/I/71NJMKjZRVL._AC_SL1500_.jpg"
+            rating={5}
           />
-
           <Product
-            id="432156798"
-            title="Amazon Brand - Solimo 500W Mixer Grinder (ISI certified) with 3 Jars"
-            price={239.99}
-            image="https://m.media-amazon.com/images/I/71wvRzsAhWL._AC_UL320_.jpg"
-            rating={4}
+            id="23445930"
+            title="
+            Naglene Water Bottle - Tritan 32oz/1-Quart Narrow Mouth BPA-Free Water Bottle"
+            price={24.95}
+            image="https://images-na.ssl-images-amazon.com/images/I/51cWUz6bIbL._AC_SL1000_.jpg"
+            rating={5}
           />
-
           <Product
-            id="4329874561"
-            title="AmazonBasics Foldable Storage Cubes (6 Pack), Grey"
-            price={239.99}
-            image="https://m.media-amazon.com/images/I/912YEBwnRRL._AC_UL320_.jpg"
-            rating={4}
+            id="3254354345"
+            title="Cracking the Coding Interview: 189 Programming Questions and Solutions 6th Edition"
+            price={26.99}
+            image="https://images-na.ssl-images-amazon.com/images/I/410hiaPGyCL._SX348_BO1,204,203,200_.jpg"
+            rating={5}
           />
         </div>
+
         <div className="home__row">
           <Product
-            id="4329885647"
-            title="All-new Echo Dot (4th Gen) | Next generation smart speaker with improved bass and Alexa (Blue)"
-            price={25.0}
-            image="https://m.media-amazon.com/images/I/51WzcEP+TVL._AC_UY218_.jpg"
+            id="123456789"
+            title="Acer EI491CR Pbmiiipx 49 Curved DFHD (3840 x 1080) VA Monitor with AMD Radeon FreeSync2 Technology ,144Hz, VESA Certified DisplayHDR400, DCI-P3,Black"
+            price={749.99}
+            image="https://images-na.ssl-images-amazon.com/images/I/71IuwPZBKnL._AC_SL1500_.jpg"
+          />
+          <Product
+            id="987654321"
+            title="Lysol Disinfecting Wipes, Lemon & Lime Blossom, 80ct"
+            price={6.99}
+            image="https://images-na.ssl-images-amazon.com/images/I/61HSAafL8AL._AC_SX679_.jpg"
             rating={5}
           />
         </div>

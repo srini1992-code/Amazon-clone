@@ -42,4 +42,10 @@
   border: 1px solid;
   border-color: #a88734 #9c7e33 #846a29;
   color: #111;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+.payment__btn:hover {
+  transform: scale(1.015);
+  box-shadow: 1.25px 2.5px 0.5px #888888;
 }

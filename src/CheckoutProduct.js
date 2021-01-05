@@ -3,20 +3,24 @@ import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 
 function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
+  //used to pull information or change info with dispatch
   const [{ basket }, dispatch] = useStateValue();
+
   const removeFromBasket = () => {
-    //   remove the item from basket
+    // remove the item from the basket
     dispatch({
       type: 'REMOVE_FROM_BASKET',
       id: id,
     });
   };
+
   return (
     <div className="checkoutProduct">
       <img className="checkoutProduct__image" src={image} alt="" />
+
       <div className="checkoutProduct__info">
-        <p className="checkoutProduct__title">{title}</p>
-        <p className="checkoutProduct__price">
+        <p classname="checkoutProduct__title">{title}</p>
+        <p classname="checkoutProduct__price">
           <small>$</small>
           <strong>{price}</strong>
         </p>
@@ -28,9 +32,8 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
               <p>⭐</p>
             ))}
         </div>
-        {/* render the button when theres no hidebutton */}
         {!hideButton && (
-          <button classname="checkoutProduct__btn" onClick={removeFromBasket}>
+          <button className="checkoutProduct__btn" onClick={removeFromBasket}>
             Remove from Basket
           </button>
         )}

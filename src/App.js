@@ -46,13 +46,16 @@ function App() {
             <Header />
             <Orders />
           </Route>
+
           <Route path="/login">
             <Login />
           </Route>
+
           <Route path="/checkout">
             <Header />
             <Checkout />
           </Route>
+
           <Route path="/payment">
             <Header />
             <Elements stripe={promise}>

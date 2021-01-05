@@ -16,32 +16,26 @@ function Header() {
   };
   return (
     <div className="header">
-      {/* logo */}
       <Link to="/">
         <img
           className="header__logo"
-          src="https://pngimg.com/uploads/amazon/amazon_PNG25.png"
-          alt=""
+          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
         />
       </Link>
 
-      {/* search bar in header */}
       <div className="header__search">
         <input className="header__searchInput" type="text" />
         <SearchIcon className="header__searchIcon" />
-        {/* logo */}
       </div>
 
       <div className="header__nav">
         <Link to={!user && '/login'}>
-          {/* header right */}
           <div onClick={handleAuthentication} className="header__option">
             <span className="header__optionLineOne">
-              Hello,{!user ? 'Guest' : user.email}
-              {''}
+              Hello {!user ? 'Guest' : user.email}{' '}
             </span>
             <span className="header__optionLineTwo">
-              {user ? 'Sign out' : 'Sign In'}
+              {user ? 'Sign Out' : 'Sign In'}
             </span>
           </div>
         </Link>
@@ -49,7 +43,7 @@ function Header() {
         <Link to="/orders">
           <div className="header__option">
             <span className="header__optionLineOne">Returns</span>
-            <span className="header__optionLineTwo"> & Orders</span>
+            <span className="header__optionLineTwo">& Orders</span>
           </div>
         </Link>
 
